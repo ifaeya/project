@@ -1,0 +1,9 @@
+<form method="post" action="{{ path('participantservice_delete', {'participantservicereference': participantservice.participantservicereference}) }}" onsubmit="return confirm('Est ce que vous etes sure de supprimer ce service?');">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ participantservice.participantservicereference) }}">
+	<button class="btn">
+		<img src="https://img.icons8.com/metro/26/fa314a/trash.png"/>
+	</button>
+
+
+</form>

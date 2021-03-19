@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participantservice
+{% endblock %}
+
+{% block body %}
+	<h1>service</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Reference</th>
+				<td>{{ participantservice.participantservicereference }}</td>
+			</tr>
+			<tr>
+				<th>Libelle</th>
+				<td>{{ participantservice.participantservicelibelle }}</td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td>{{ participantservice.participantservicedescription }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('participantservice_index') }}">Back to list</a>
+
+	<a href="{{ path('participantservice_edit', {'participantservicereference': participantservice.participantservicereference}) }}">edit</a>
+
+	{{ include('participantservice/_delete_form.html.twig') }}
+{% endblock %}
