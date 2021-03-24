@@ -94,4 +94,7 @@ class ParticipantserviceController extends AbstractController
 
         return $this->redirectToRoute('participantservice_index');
     }
+    /**
+     * @Route
+     */
 }
